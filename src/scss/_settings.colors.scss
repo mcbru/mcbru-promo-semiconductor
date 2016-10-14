@@ -8,7 +8,8 @@
 // Color palette.
 $color-brand-primary:               #ed1bed;
 $color-brand-primary-highlight:     lighten($color-brand-primary, 5%);
-$color-brand-primary-shadow:        darken($color-brand-primary,  5%);
+// $color-brand-primary-shadow:        darken($color-brand-primary,  5%);
+$color-brand-primary-shadow:        #8e108e;
 
 $color-brand-secondary:             #007fc4;
 $color-brand-secondary-highlight:   lighten($color-brand-secondary, 5%);

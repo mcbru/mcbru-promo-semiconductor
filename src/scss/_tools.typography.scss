@@ -19,6 +19,10 @@
     font-family: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;
   }
 
+  @elseif ($family == "handwriting") {
+    font-family: 'Caveat', cursive;
+  }
+
   @else {
     @warn "#{$family} is not a valid font-family."
   }

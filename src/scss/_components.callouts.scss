@@ -1,11 +1,9 @@
 /* ==========================================================================
-   #GRAPHS
+   #CALLOUTS
    ========================================================================== */
 
-
-.graph__header {
-  background-color: $color-graph-header;
-  color: $color-white;
-  @include font-weight(normal);
-  text-transform: uppercase;
+.c-callout {
+  @include font-family(handwriting);
+  color: $color-highlight;
+  @include font-size(30px);
 }

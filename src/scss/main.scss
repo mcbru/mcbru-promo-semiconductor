@@ -111,6 +111,7 @@ $mq-breakpoints: (
 @import "./node_modules/inuitcss/node_modules/sass-mq/mq";
 @import "tools.aliases";
 @import "tools.typography";
+@import "tools.alignment";
 
 
 
@@ -131,7 +132,7 @@ $mq-breakpoints: (
 @import "./node_modules/inuitcss/elements/elements.page";
 $inuit-font-size-h1:  51px;
 $inuit-font-size-h2:  40px;
-// $inuit-font-size-h3:  24px !default;
+$inuit-font-size-h3:  18px;
 // $inuit-font-size-h4:  20px !default;
 // $inuit-font-size-h5:  18px !default;
 // $inuit-font-size-h6:  16px !default;
@@ -174,7 +175,8 @@ $inuit-font-size-h2:  40px;
 @import "components.bands";
 @import "components.page-head";
 @import "components.logo";
-@import "components.graphs";
+@import "components.stats";
+@import "components.callouts";
 
 
 
