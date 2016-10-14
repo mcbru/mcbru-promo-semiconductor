@@ -1,0 +1,11 @@
+/* ==========================================================================
+   #GRAPHS
+   ========================================================================== */
+
+
+.graph__header {
+  background-color: $color-graph-header;
+  color: $color-white;
+  @include font-weight(normal);
+  text-transform: uppercase;
+}

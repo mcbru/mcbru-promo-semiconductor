@@ -1,0 +1,108 @@
+/* ==========================================================================
+   #BANDS
+   ========================================================================== */
+
+
+.c-band {
+  text-align: center;
+  // opacity: 0;
+  h1, h2 {
+    @include font-weight(normal);
+  }
+  p {
+    text-align: left;
+  }
+  padding-top: $unit-large;
+  padding-bottom: $unit-large;
+}
+
+
+
+
+
+/* Style variants
+   ========================================================================== */
+
+.c-band--primary {
+  background-color: #4a8ec2;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none; /* [4] */
+    color: #fff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #3774a2;
+  }
+
+}
+
+.c-band--secondary {
+  background-color: #2f4054;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #1d2733;
+  }
+
+}
+
+
+
+
+
+/* Background variants
+   ========================================================================== */
+
+.c-band--image {
+  padding-top: $unit-huge;
+  padding-bottom: $unit-huge;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $color-white;
+}
+
+.c-band--image__1 {
+  background-image: url(earth-from-space.jpg);
+  background-position: 0 $unit-large;
+}
+
+.c-band--image__2 {
+  background-image: url(designer.jpg);
+}
+
+.c-band--image__3 {
+  background-image: url(pen.jpg);
+}
+
+.c-band--tint {
+  background-color: $color-band-tint;
+}
+
+
+
+
+
+/* Size variants
+   ========================================================================== */
+
+.c-band--small {
+  padding: inuit-rem($inuit-global-spacing-unit-tiny) inuit-rem($inuit-global-spacing-unit-small);
+}
+
+.c-band--large {
+  padding: inuit-rem($inuit-global-spacing-unit) inuit-rem($inuit-global-spacing-unit-large);
+}

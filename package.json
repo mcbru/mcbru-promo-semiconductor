@@ -1,0 +1,37 @@
+{
+  "name": "landing-page-starter-tool",
+  "version": "0.0.1",
+  "description": "An npm build tool designed for quickly spinning up landing page development",
+  "main": "index.js",
+  "author": "Sam Templeman <sam@mcbru.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "animate-sass": "git+https://github.com/tgdev/animate-sass.git",
+    "browserify": "^13.1.0",
+    "http-server": "^0.7.3",
+    "imageoptim-cli": "^1.14.8",
+    "inuitcss": "^6.0.0-beta.3",
+    "jshint": "^2.5.10",
+    "livereload": "^0.5.0",
+    "minifyify": "^6.0.0",
+    "node-sass": "^3.10.1",
+    "opener": "^1.4.0",
+    "parallelshell": "^1.0.0"
+  },
+  "scripts": {
+    "clean": "rm dist/main.css && rm dist/main.js",
+    "prebuild": "npm run clean -s",
+    "build": "npm run build:scripts -s && npm run build:styles -s",
+    "build:scripts": "browserify assets/scripts/main.js > dist/main.js",
+    "build:styles": "node-sass assets/styles/main.scss dist/main.css",
+    "watch": "npm run watch:build -s",
+    "watch:build": "nodemon -q -w assets/ --ext \".\" --exec \"npm run build\"",
+    "open:dev": "opener http://localhost:9090",
+    "serve": "http-server -p 9090 dist/",
+    "livereload": "livereload dist/",
+    "dev": "npm run open:dev -s && parallelshell \"npm run livereload -s\" \"npm run serve -s\" \"npm run watch -s\""
+  },
+  "dependencies": {
+    "waypoints": "^4.0.1"
+  }
+}
