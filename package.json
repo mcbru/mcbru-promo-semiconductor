@@ -16,7 +16,7 @@
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
     "scss": "node-sass --output-style compressed -o dist/css src/scss",
     "lint": "eslint src/js",
-    "uglify": "mkdir -p dist/js && uglifyjs src/js/*.js -m -o dist/js/app.js && uglifyjs src/js/*.js -m -c -o dist/js/app.min.js",
+    "uglify": "mkdir -p dist/js && uglifyjs src/js/*.js -o dist/js/app.js && uglifyjs src/js/*.js -m -c -o dist/js/app.min.js && uglifyjs src/js/*.js --source-map dist/js/app.js.map",
     "imagemin": "imagemin src/images/* -o dist/images",
     "serve": "browser-sync start --server --startPath \"dist/\" --files \"dist/css/*.css, dist/js/*.js, dist/*.html, !node_modules/**/*.html\"",
     "build:css": "npm run scss && npm run autoprefixer",
