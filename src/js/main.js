@@ -2,10 +2,13 @@
  * Animate at waypoint, requires jQuery
  */
 
+$(function(){
+var element1 = $('.c-band--image__2 h2, .c-band--image__2 p');
 var inview = new Waypoint.Inview({
-  element: $('#inview-example')[0],
+  element: element1,
   enter: function(direction) {
-    console.log('Enter triggered with direction ' + direction)
+    element1.addClass('animated').addClass('fadeIn');
+    console.log('Enter triggered with direction ' + direction);
   },
   entered: function(direction) {
     console.log('Entered triggered with direction ' + direction)
@@ -17,7 +20,6 @@ var inview = new Waypoint.Inview({
     console.log('Exited triggered with direction ' + direction)
   }
 })
-$(function(){
 
 // var waypoint = new Waypoint({
 //   element: document.getElementById('waypoint'),
