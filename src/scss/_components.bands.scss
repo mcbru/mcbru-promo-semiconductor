@@ -5,7 +5,6 @@
 
 .c-band {
   text-align: center;
-  // opacity: 0;
   h1, h2 {
     @include font-weight(normal);
   }
@@ -23,40 +22,9 @@
 /* Style variants
    ========================================================================== */
 
-.c-band--primary {
-  background-color: #4a8ec2;
 
-  &,
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: none; /* [4] */
-    color: #fff;
-  }
-
-  &:hover,
-  &:focus {
-    background-color: #3774a2;
-  }
-
-}
-
-.c-band--secondary {
-  background-color: #2f4054;
-
-  &,
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: none;
-    color: #fff;
-  }
-
-  &:hover,
-  &:focus {
-    background-color: #1d2733;
-  }
-
+.c-band--tint {
+  background-color: $color-band-tint;
 }
 
 
@@ -90,10 +58,6 @@
 
 .c-band--image__3 {
   background-image: url(../images/pen.jpg);
-}
-
-.c-band--tint {
-  background-color: $color-band-tint;
 }
 
 

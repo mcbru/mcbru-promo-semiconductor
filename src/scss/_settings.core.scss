@@ -12,7 +12,6 @@ $inuit-global-line-height:  32px;
 
 
 // How many times larger/smaller than the default should our spacing unit
-// variants be?
+// variants be? Default spacing unit = round($inuit-global-line-height)
 
-$inuit-global-spacing-unit-factor-large:  2;
-$inuit-global-spacing-unit-factor-huge:   8;
+$inuit-global-spacing-unit-factor-huge:  6;

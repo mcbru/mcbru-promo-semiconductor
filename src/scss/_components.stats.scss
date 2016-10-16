@@ -16,27 +16,17 @@ $graph-height: 253px;
 // }
 // Animation Mixin
 @mixin bar-animation($time, $dimension) {
-  visibility: hidden;
   @if $dimension == width {
     width: 0;
-    -webkit-animation: animate-width;
-    -moz-animation: animate-width;
     animation: animate-width;
   }
   @if $dimension == height {
     height: 0;
-    -webkit-animation: animate-height;
-    -moz-animation: animate-height;
     animation: animate-height;
   }
   animation-timing-function: cubic-bezier(.35,.95,.67,.99);
-  -webkit-animation-timing-function: cubic-bezier(.35,.95,.67,.99);
-  -moz-animation-timing-function: cubic-bezier(.35,.95,.67,.99);
   animation-duration: $time*2;
-  -webkit-animation-duration: $time*2;
-  -moz-animation-duration: $time*2;
   animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
 }
 
 @keyframes animate-width {
@@ -63,12 +53,6 @@ $graph-height: 253px;
   > p {
     text-align: center;
   }
-  .hero {
-    color: $color-brand-primary-shadow;
-    @include font-weight(bold);
-    @include font-size(70px);
-    text-align: center;
-  }
 }
 
 .stat__header {
@@ -86,11 +70,16 @@ $graph-height: 253px;
   &.stat__header--conversion {
     background-image: url(../images/icon-conversion.png);
     background-position: 0.8em 0.8em;
+    margin-bottom: 3*$unit;
   }
   &.stat__header--pipeline {
     background-image: url(../images/icon-pipeline.png);
     background-position: 0.8em 1.1em;
   }
+}
+
+.bar-animated {
+  @include bar-animation($default-delay, height);
 }
 
 .bar-chart {
@@ -126,7 +115,7 @@ $graph-height: 253px;
      margin-right: 0;
     }
     .bar {
-      @include bar-animation($default-delay, height);
+      visibility: hidden;
       // box-shadow: 1px 0 2px rgba(0,0,0,.15);
       // border: 1px solid #2d2d2d;
       // border-radius: 3px 3px 0 0;
@@ -156,7 +145,6 @@ $graph-height: 253px;
     @for $i from 1 through $bars {
       .bar-#{$i} {
         animation-delay: $default-delay+.1*$i;
-        -webkit-animation-delay: $default-delay+.1*$i;
       }
     }
   }
