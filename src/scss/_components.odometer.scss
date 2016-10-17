@@ -77,5 +77,5 @@
 // timing override hack
 // https://github.com/HubSpot/odometer/issues/91
 .odometer.odometer-animating-up .odometer-ribbon-inner, .odometer.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
-  transition-duration: 6s !important
+  transition-duration: 5s !important
 }
