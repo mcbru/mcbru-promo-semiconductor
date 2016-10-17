@@ -1,20 +1,8 @@
 /*
- * Animate at waypoint, requires jQuery
+ * Requires jQuery
  */
 
 $(function(){
-
-  // var odometer = $('.odometer');
-  // setTimeout(function(){
-  //   console.log(odometer);
-  //   // odometer.innerHTML = 15166000;
-  // }, 3000);
-
-  // var video = $('video');
-  // video.addEventListener('ended',function(){
-  //     // video.load();
-  //     console.log('video ended');
-  // },false);
 
   window.odometerOptions = {
     duration: 5 * 1000
@@ -58,7 +46,7 @@ $(function(){
       var osTrigger = (trigger) ? trigger : osElement;
       osTrigger.waypoint(function(){
         osElement.addClass('animated').addClass('fadeIn');
-        console.log(osElement);
+        // console.log(osElement);
       }, {
         // triggerOnce: true,
         // context:"document.body",
