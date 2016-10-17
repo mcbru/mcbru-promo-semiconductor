@@ -4,6 +4,19 @@
 
 $(function(){
 
+  $.fn.scrollView = function () {
+    return this.each(function () {
+      $('html, body').animate({
+        scrollTop: $(this).offset().top
+      }, 1000);
+    });
+  }
+
+  $('.c-page-head__btn').click(function (event) {
+    event.preventDefault();
+    $('#section-contact').scrollView();
+  });
+
   window.odometerOptions = {
     duration: 5 * 1000
   };

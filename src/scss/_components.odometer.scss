@@ -5,10 +5,13 @@
 .odometer {
   color: $color-brand-primary-shadow;
   @include font-weight(bold);
-  @include font-size(70px);
+  @include font-size(50px);
   .odometer-inside:before {
     content: "$";
     vertical-align: middle;
+  }
+  @include mq($from: small) {
+    @include font-size(70px);
   }
 }
 

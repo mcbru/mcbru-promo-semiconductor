@@ -55,24 +55,27 @@ $graph-height: 253px;
   }
 }
 
-.stat__header {
-  background-color: $color-graph-header;
+.c-stat__title {
+  background-color: $color-stat-title;
   color: $color-white;
+  @include mq($until: small) {
+    @include font-size(14px, 3.5)
+  }
   @include font-weight(bold);
   text-align: center;
   text-transform: uppercase;
   line-height: 3;
   background-repeat: no-repeat;
-  &.stat__header--clickthrough {
+  &.c-stat__title--clickthrough {
     background-image: url(../images/icon-clickthrough.png);
     background-position: 0.5em 0.5em;
   }
-  &.stat__header--conversion {
+  &.c-stat__title--conversion {
     background-image: url(../images/icon-conversion.png);
     background-position: 0.8em 0.8em;
     margin-bottom: 3*$unit;
   }
-  &.stat__header--pipeline {
+  &.c-stat__title--pipeline {
     background-image: url(../images/icon-pipeline.png);
     background-position: 0.8em 1.1em;
   }
@@ -164,7 +167,7 @@ $graph-height: 253px;
       // float: left;
       margin-right: 10.5%;
       @include font-weight(bold);
-      @include font-size(14px);
+      @include font-size(14px, 1.5);
       // font-size: 11px;
       // width: 11.5%;
       width: 40%;

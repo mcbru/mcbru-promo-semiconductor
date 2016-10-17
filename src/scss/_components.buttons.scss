@@ -31,6 +31,10 @@
   text-transform: uppercase;
   letter-spacing: 0.2em;
   @include font-weight(light);
+  @include mq($until: small) {
+    width: 100%;
+    margin-bottom: $unit;
+  }
 }
 
 
@@ -65,13 +69,13 @@
 /* Size variants
    ========================================================================== */
 
-.c-btn--small {
-  padding: inuit-rem($inuit-global-spacing-unit-tiny) inuit-rem($inuit-global-spacing-unit-small);
-}
-
-.c-btn--large {
-  padding: inuit-rem($inuit-global-spacing-unit) inuit-rem($inuit-global-spacing-unit-large);
-}
+// .c-btn--small {
+//   padding: inuit-rem($inuit-global-spacing-unit-tiny) inuit-rem($inuit-global-spacing-unit-small);
+// }
+//
+// .c-btn--large {
+//   padding: inuit-rem($inuit-global-spacing-unit) inuit-rem($inuit-global-spacing-unit-large);
+// }
 
 
 
