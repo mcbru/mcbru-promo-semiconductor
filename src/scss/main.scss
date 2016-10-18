@@ -104,7 +104,7 @@ $use-all: true; // all animations status
 /// @link https://github.com/sass-mq/sass-mq#seeing-the-currently-active-breakpoint Full documentation and examples
 $mq-breakpoints: (
     tiny:    320px,
-    small:   740px,
+    small:   650px,
     medium:  980px,
     large:   1300px
 );
@@ -130,13 +130,8 @@ $mq-breakpoints: (
 // ELEMENTS
 @import "elements.page";
 @import "./node_modules/inuitcss/elements/elements.page";
-$inuit-font-size-h1:  51px;
-$inuit-font-size-h2:  40px;
-$inuit-font-size-h3:  18px;
-// $inuit-font-size-h4:  20px !default;
-// $inuit-font-size-h5:  18px !default;
-// $inuit-font-size-h6:  16px !default;
-@import "./node_modules/inuitcss/elements/elements.headings";
+@import "elements.headings";
+// @import "./node_modules/inuitcss/elements/elements.headings";
 @import "./node_modules/inuitcss/elements/elements.images";
 @import "./node_modules/inuitcss/elements/elements.tables";
 @import "elements.type";

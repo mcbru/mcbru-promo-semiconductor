@@ -33,8 +33,19 @@
   @include font-weight(light);
   @include mq($until: small) {
     width: 100%;
+    @include font-size(16px);
+  }
+  @include mq($until: medium) {
     margin-bottom: $unit;
   }
+}
+
+
+/* Override HubSpot defaults
+   ========================================================================== */
+.c-btn--hs {
+  text-decoration: none !important;
+  color: $color-white !important;
 }
 
 
