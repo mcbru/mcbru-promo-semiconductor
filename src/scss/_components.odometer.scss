@@ -6,7 +6,7 @@
 .odometer {
   color: $color-brand-primary-shadow;
   @include font-weight(bold);
-  @include font-size(42px);
+  @include font-size(36px);
   .odometer-inside:before {
     content: "$";
     vertical-align: middle;

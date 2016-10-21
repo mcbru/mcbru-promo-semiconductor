@@ -2,3 +2,6 @@
 *.sass-cache*
 *.log
 node_modules/
+dist/css
+dist/images
+dist/js

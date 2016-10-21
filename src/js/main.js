@@ -21,11 +21,12 @@ $(function(){
     duration: 5 * 1000
   };
 
+  var gross_opp_pipeline = $('.odometer').attr('data-gross-op-pipeline');
   var container5 = $('.odometer');
   var inview5 = new Waypoint.Inview({
     element: container5,
     enter: function(direction) {
-      container5.html(15166000);
+      container5.html(gross_opp_pipeline);
     }
   })
 
