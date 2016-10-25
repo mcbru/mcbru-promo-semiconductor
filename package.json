@@ -24,7 +24,7 @@
     "scss": "node-sass --output-style compressed -o dist/css src/scss",
     "lint": "eslint src/js",
     "uglify": "mkdir -p dist/js && uglifyjs node_modules/jquery/dist/jquery.slim.min.js node_modules/waypoints/lib/jquery.waypoints.min.js node_modules/waypoints/lib/shortcuts/inview.min.js node_modules/odometer/odometer.min.js src/js/main.js -o dist/js/app.js && uglifyjs src/js/*.js -m -c -o dist/js/app.min.js && uglifyjs src/js/*.js --source-map dist/js/app.js.map",
-    "imagemin": "imagemin src/images/* -o dist/images",
+    "imagemin": "cp src/images/* dist/images",
     "serve": "browser-sync start --server --startPath \"dist/\" --files \"dist/css/*.css, dist/js/*.js, dist/*.html, !node_modules/**/*.html\"",
     "build:css": "npm run scss && npm run autoprefixer",
     "build:js": "npm run lint && npm run uglify",
